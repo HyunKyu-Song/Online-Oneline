@@ -1,0 +1,33 @@
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   background-color: #e8e8e8;
+   font-size: 20px;
+   line-height: 30px;
+}
+
+.navbar ul {
+   display: flex;
+}
+
+.menu li, .home {
+   cursor: pointer;
+   margin-right: 50px;
+   list-style: none;
+   font-weight: 500;
+}
+
+.menu li:hover{
+   transition: all 0.2s;
+   color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar .home {
+   font-size: 30px;
+   color: rgba(255, 127, 80, 0.9);
+   font-weight: 700;
+}
+
+/* @media screen and (max-width: 767px){
+	
+} */
