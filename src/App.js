@@ -1,11 +1,13 @@
 /*eslint-disable*/
+import { Routes, Route } from 'react-router-dom';
+
 import './style/Navbar.css';
 import './style/Home.css';
 import './style/Write.css';
 import './style/List.css';
 import './style/Detail.css';
+
 import Navbar from './component/Navbar';
-import { Routes, Route, useNavigate } from 'react-router-dom';
 import Home from './component/Home';
 import Login from './component/Login';
 import Write from './component/Write';

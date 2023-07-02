@@ -55,7 +55,7 @@ export default function Write() {
                      newData = JSON.stringify([data]);  // data를 json형태로 변경해서 newData에 저장
                   }
                   localStorage.setItem('DATA', newData);
-                  dispatch(PlusNum());
+                  dispatch(PlusNum(store.ListNum));
                   alert('한줄평 작성✍ 완료!')
                   navigate('/list')
                   

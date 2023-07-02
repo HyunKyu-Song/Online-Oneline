@@ -5,7 +5,7 @@ data = JSON.parse(data);
 
 var len = 0;
 if(data != null){
-   len = data.length;
+   len = data.length+1;
 }
 
 let LocalStorageData = createSlice({
@@ -22,8 +22,15 @@ let ListNum = createSlice({
    name: 'ListNum',
    initialState: len,
    reducers: {
-      PlusNum(state) {
-         return state + 1;
+      PlusNum(state, action) {
+         if(len === 0){
+            console.log('len = 0')
+            return state + 1;
+         }
+         else{
+            console.log('len != 0')
+            return action.payload + 1;
+         }
       },
       MinusNum(state) {
          return state - 1;

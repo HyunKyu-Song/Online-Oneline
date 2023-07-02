@@ -1,5 +1,25 @@
 .list-container{
-   height: 100vh;
+   height: 100%;
+}
+
+.list-search{
+   text-align: center;
+   margin: 20px;
+}
+
+.list-search input{
+   width: 20%;
+   padding: 10px;
+   border-radius: 20px;
+   border: 1px solid black;
+   text-align: center;
+}
+
+.list-search button{
+   cursor: pointer;
+   font-size: 25px;
+   border: none;
+   background-color: white;
 }
 
 .list-item {
