@@ -1,7 +1,7 @@
 .navbar {
    display: flex;
    justify-content: space-between;
-   background-color: #e8e8e8;
+   background-color: #ffcd4a;
    font-size: 20px;
    line-height: 30px;
 }
@@ -24,7 +24,7 @@
 
 .navbar .home {
    font-size: 30px;
-   color: rgba(255, 127, 80, 0.9);
+   color: rgba(255, 8, 0, 0.5);
    font-weight: 700;
 }
 

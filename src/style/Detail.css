@@ -1,0 +1,70 @@
+.detail-container{
+   width: 70%;
+   height: 100vh;
+   margin: auto;
+}
+
+.detail-item{
+   margin-top: 10%;
+   text-align: center;
+   background-color: #303030;
+   color: white;
+   padding: 50px;
+   border-radius: 20px;
+}
+
+.detail-container div{
+   margin-bottom: 10px;
+}
+
+.delete-container{
+   text-align: end;
+}
+
+.deleteBtn{
+   font-size: 40px;
+   cursor: pointer;
+}
+
+.deleteBtn:hover{
+   cursor: pointer;
+   color: red;
+}
+
+.detail-title {
+   cursor: pointer;
+   font-size: 30px;
+   font-weight: bold;
+}
+
+.detail-content {
+   font-size: 25px;
+   margin-top: 50px;
+}
+
+.detail-writer{
+   font-size: 16px;
+   font-weight: 500;
+   text-align: end;
+   margin-top: 150px;
+}
+
+.detail-date{
+   font-size: 16px;
+   font-weight: 500;
+   text-align: end;
+}
+
+.detail-container button{
+   cursor: pointer;
+   padding: 5px 20px;
+   font-weight: 700;
+   font-size: 20px;
+   border: none;
+   border-radius: 50px;
+   margin: 0 10px;
+}
+
+.detail-container button:hover{
+   background-color: #aaa;
+}

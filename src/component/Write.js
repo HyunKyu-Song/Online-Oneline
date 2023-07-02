@@ -1,15 +1,21 @@
+/*eslint-disable*/
 import React, { useState } from "react"
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { PlusNum } from "../store";
 
 export default function Write() {
 
-   var [title, setTitle] = useState('');
-   var [content, setContent] = useState('');
-   var [writer, setWriter] = useState('');
-   var navigate = useNavigate();
-
+   let [title, setTitle] = useState('');
+   let [content, setContent] = useState('');
+   let [writer, setWriter] = useState('');
+   let navigate = useNavigate();
+   let today = new Date();
+   let store = useSelector((state) => { return state });
+   let dispatch = useDispatch();
+   
    return (
-      <div>
+      <div className="write-container">
          <form>
             <fieldset>
                <legend>한줄평 작성 ✍</legend>
@@ -32,10 +38,10 @@ export default function Write() {
                   }} name="writer"></input>
                </div>
                <button onClick={() => {
-                  console.log(title, content, writer)
+                  console.log(store.ListNum, title, content, writer)
 
                   // form에 입력한 데이터
-                  var data = { title: title, content: content, writer: writer };
+                  var data = { num: store.ListNum ,title: title, content: content, writer: writer, date: today.toLocaleString()};
                   var newData
 
                   if (localStorage.getItem('DATA') != null) {
@@ -49,6 +55,7 @@ export default function Write() {
                      newData = JSON.stringify([data]);  // data를 json형태로 변경해서 newData에 저장
                   }
                   localStorage.setItem('DATA', newData);
+                  dispatch(PlusNum());
                   alert('한줄평 작성✍ 완료!')
                   navigate('/list')
                   
