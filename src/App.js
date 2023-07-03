@@ -15,6 +15,7 @@ import List from './component/List';
 import MyPage from './component/MyPage';
 import About from './component/About';
 import Deatail from './component/Detail';
+import Update from './component/Update';
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
 
         <Route path='/list' element={<List />} />
         <Route path='/list/detail/:id' element={<Deatail />} />
+
+        <Route path='/update/:id' element={<Update/>} />
 
         <Route path='/mypage' element={<MyPage />} />
         <Route path='/about' element={<About />} />
