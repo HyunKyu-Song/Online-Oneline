@@ -3,6 +3,24 @@
    font-weight: 500;
 }
 
+.ment-alert{
+   display: none;
+   position: fixed;
+   background-color: rgba(0, 0, 0, 0.8);
+   color: white;
+   font-size: 30px;
+   width: 80%;
+   top: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+   border-radius: 100px;
+}
+
+.show{
+   display: block;
+}
+
 .home-box1{
    margin: 100px;
    font-size: 45px;

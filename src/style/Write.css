@@ -11,6 +11,32 @@ fieldset{
    padding: 50px;
    border-radius: 20px;
    border: 5px solid black;
+   position: relative;
+}
+
+.warning-alert{
+   display: none;
+   width: 80%;
+   height: 80%;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+   border-radius: 20px;
+   background-color: rgba(0, 0, 0, 0.9);
+   color: white;
+   position: absolute;
+   font-weight: 700;
+   font-size: 30px;
+}
+
+.show{
+   display: block;
+}
+
+.warning-alert p{
+   margin-top: 30%;
 }
 
 legend{
