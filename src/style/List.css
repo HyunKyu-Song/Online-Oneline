@@ -1,11 +1,6 @@
-.list-container{
-   height: 100%;
-}
-
-.list-container-empty{
+/* .list-container{
    height: 100vh;
-   height: 100%;
-}
+} */
 
 .list-search{
    text-align: center;

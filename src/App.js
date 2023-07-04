@@ -6,6 +6,7 @@ import './style/Home.css';
 import './style/Write.css';
 import './style/List.css';
 import './style/Detail.css';
+import './style/About.css';
 
 import Navbar from './component/Navbar';
 import Home from './component/Home';

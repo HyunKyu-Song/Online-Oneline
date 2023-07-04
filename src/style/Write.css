@@ -1,6 +1,6 @@
-.write-container{
+/* .write-container{
    height: 1000px;
-}
+} */
 
 fieldset{
    text-align: center;
@@ -17,8 +17,6 @@ legend{
    font-weight: 700;
    font-size: 2rem;
 }
-
-/* s */
 
 .write-title input, .write-content input{
    width: 380px;

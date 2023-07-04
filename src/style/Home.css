@@ -67,7 +67,11 @@
 
 
 .copyRight{
+   width: 100%;
+   position: fixed;
+   bottom: 0px;
    background-color: #ffcd4a;
    padding: 10px;
-   text-align: end;
+   text-align: center;
+   opacity: 0.9;
 }

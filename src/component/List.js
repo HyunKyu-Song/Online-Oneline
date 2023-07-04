@@ -24,8 +24,7 @@ export default function List() {
    // console.log(empty);
 
    return (
-      // <div className="list-container">
-      <div className={`${empty}`}>
+      <div className="list-container">
          <div className="list-search">
             <input onInput={(e) => {
                setSearch(e.target.value);

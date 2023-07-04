@@ -9,16 +9,6 @@ if(data != null){
    len = data[data.length-1].num + 1;
 }
 
-let LocalStorageData = createSlice({
-   name: 'LocalStorageData',
-   initialState: [],
-   reducers: {
-      InsertData(state, action) {
-         state.push(...action.payload)
-      },
-   }
-})
-
 let ListNum = createSlice({
    name: 'ListNum',
    initialState: len,
@@ -32,19 +22,14 @@ let ListNum = createSlice({
             console.log('len != 0')
             return action.payload + 1;
          }
-      },
-      MinusNum(state) {
-         return state - 1;
       }
    }
 })
 
 export default configureStore({
    reducer: {
-      LocalStorageData: LocalStorageData.reducer,
       ListNum: ListNum.reducer,
    }
 })
 
-export let { InsertData } = LocalStorageData.actions;
-export let { PlusNum, MinusNum } = ListNum.actions;
+export let { PlusNum } = ListNum.actions;

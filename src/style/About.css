@@ -1,0 +1,20 @@
+.about-container{
+   width: 80%;
+   margin: auto;
+}
+
+.about-title{
+   color: rgba(255, 8, 0, 0.613);
+   margin-top: 100px;
+   font-size: 30px;
+   font-weight: 700;
+   text-align: center;
+}
+
+.about-text{
+   margin-top: 100px;
+   font-weight: 500;
+   line-height: 32px;
+   font-size: 20px;
+   text-align: center;
+}
