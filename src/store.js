@@ -4,8 +4,9 @@ var data = localStorage.getItem('DATA');
 data = JSON.parse(data);
 
 var len = 0;
-if(data != null){
-   len = data.length+1;
+if(data != null){  
+   // 새로고침 시 data[i].num + 1을 해서 다음 번호 부여함
+   len = data[data.length-1].num + 1;
 }
 
 let LocalStorageData = createSlice({

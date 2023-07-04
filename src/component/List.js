@@ -38,7 +38,7 @@ export default function List() {
 
                var copy = [...test];
                var arr = copy.filter((element) => {
-                  if(element.title.includes(search)){
+                  if (element.title.includes(search)) {
                      return element
                   }
                })
@@ -47,7 +47,10 @@ export default function List() {
             }}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
          </div>
          {
-            test != null ?
+            test == null || test.length == 0 ?
+               <div className="list-item" style={{ textAlign: 'center' }}>
+                  <h2>아직 작성된 글이 없습니다.</h2>
+               </div> :
                test.map(function (item, i) {
                   return (
                      <div onClick={() => {
@@ -60,10 +63,7 @@ export default function List() {
                         <div className="list-date">{item.date}</div>
                      </div>
                   )
-               }) :
-               <div className="list-item" style={{ textAlign: 'center' }}>
-                  <h2>아직 작성된 글이 없습니다.</h2>
-               </div>
+               })
          }
          {/* {
             data != null ?

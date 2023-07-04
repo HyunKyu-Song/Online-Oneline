@@ -18,9 +18,7 @@ legend{
    font-size: 2rem;
 }
 
-fieldset div{
-   margin-bottom: 50px;
-}
+/* s */
 
 .write-title input, .write-content input{
    width: 380px;
@@ -28,11 +26,12 @@ fieldset div{
    font-size: 20px;
    border-radius: 5px;
    border: 1px solid black;
+   margin-bottom: 50px;
 }
 
-
-.write-writer{
+.write-writer, .write-pw{
    font-size: 20px;
+   margin-bottom: 20px;
 }
 
 .write-save{

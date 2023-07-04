@@ -5,12 +5,32 @@
 }
 
 .detail-item{
+   position: relative;
    margin-top: 10%;
    text-align: center;
    background-color: #303030;
    color: white;
    padding: 50px;
    border-radius: 20px;
+}
+
+.pw-check{
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin: auto;
+   bottom: 0px;
+   display: none;
+}
+
+.detail-item .pw-check button{
+   padding: 5px 10px;
+   font-weight: 500;
+   font-size: 13px;
+}
+
+.show-pw{
+   display: block;
 }
 
 .detail-container div{

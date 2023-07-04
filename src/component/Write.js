@@ -9,6 +9,7 @@ export default function Write() {
    let [title, setTitle] = useState('');
    let [content, setContent] = useState('');
    let [writer, setWriter] = useState('');
+   let [pw, setPw] = useState('');
    let navigate = useNavigate();
    let today = new Date();
    let store = useSelector((state) => { return state });
@@ -37,11 +38,17 @@ export default function Write() {
                      setWriter(e.target.value)
                   }} name="writer"></input>
                </div>
+               <div className="write-pw">
+                  🔑패스워드: <input onInput={(e) => {
+                     // console.log(e.target.value)
+                     setPw(e.target.value)
+                  }} name="pw"></input>
+               </div>
                <button onClick={() => {
                   console.log(store.ListNum, title, content, writer)
 
                   // form에 입력한 데이터
-                  var data = { num: store.ListNum ,title: title, content: content, writer: writer, date: today.toLocaleString()};
+                  var data = { num: store.ListNum ,title: title, content: content, writer: writer, pw: pw, date: today.toLocaleString()};
                   var newData
 
                   if (localStorage.getItem('DATA') != null) {

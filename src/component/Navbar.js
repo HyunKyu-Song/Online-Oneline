@@ -13,10 +13,10 @@ export default function Navbar() {
             <li onClick={()=>{navigate('/')}} className='home'>Online Oneline <FontAwesomeIcon icon={faPenToSquare} /></li>
          </ul>
          <ul className="menu">
-            <li onClick={()=>{navigate('/login')}}>로그인</li>
+            {/* <li onClick={()=>{navigate('/login')}}>로그인</li> */}
             <li onClick={()=>{navigate('/write')}}>글 작성</li>
             <li onClick={()=>{navigate('/list')}}>글 목록</li>
-            <li onClick={()=>{navigate('/mypage')}}>My Page</li>
+            {/* <li onClick={()=>{navigate('/mypage')}}>My Page</li> */}
             <li onClick={()=>{navigate('/about')}}>About</li>
          </ul>
       </nav>
