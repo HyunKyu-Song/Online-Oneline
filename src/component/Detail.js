@@ -1,14 +1,11 @@
 /*eslint-disable*/
 
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom"
 
 export default function Deatail() {
 
    let { id } = useParams();
-   let store = useSelector((state) => { return state });
-   let dispatch = useDispatch();
    let navigate = useNavigate();
    var data = localStorage.getItem('DATA');
    data = JSON.parse(data);
@@ -17,6 +14,23 @@ export default function Deatail() {
    let [show, setShow] = useState('');
    let [pw, setPw] = useState('');
    let [correct, setCorrect] = useState(false);
+   let [alert, setAlert] = useState('');
+   let [ment, setMent] = useState('');
+   let [timer, setTimer] = useState(0);
+
+   useEffect(() => {
+      if (timer == 0) {
+         setAlert('');
+      }
+      else {
+         let free = setTimeout(() => {
+            setTimer(timer - 1);
+         }, 1000);
+         return () => {
+            clearTimeout(free);
+         }
+      }
+   }, [timer])
 
    useEffect(() => {
       setN(id);
@@ -26,7 +40,6 @@ export default function Deatail() {
             setA(i);
          }
       })
-
    }, [n]);
 
    return (
@@ -34,6 +47,9 @@ export default function Deatail() {
          {
             n == -1 ? <h2>Loading...</h2> :
                <div className="detail-item">
+                  <div className={`ment-alert ${alert}`}>
+                     <p>{ment}</p>
+                  </div>
                   <div className="detail-title">제목: {data[a].title} </div>
                   <div className="detail-content">{data[a].content}</div>
                   <div className="detail-writer">작성자: {data[a].writer}</div>
@@ -42,16 +58,19 @@ export default function Deatail() {
                   <div>
                      <div className={`write-pw pw-check ${show}`}>
                         🔑패스워드: <input onInput={(e) => {
-                           // console.log(e.target.value)
                            setPw(e.target.value)
                         }} name="pw"></input>
                         <button onClick={() => {
                            if (pw == data[a].pw) {
                               setCorrect(true);
-                              alert('인증되었습니다. 수정 또는 삭제 버튼을 눌러주세요.')
+                              setAlert('show');
+                              setMent('인증되었습니다. 수정 또는 삭제 버튼을 눌러주세요.');
                            }
-                           else
-                              alert('패스워드가 틀렸습니다.')
+                           else{
+                              setAlert('show');
+                              setTimer(2);
+                              setMent('패스워드가 틀렸습니다.');
+                           }
                            console.log(correct, pw, data[a].pw)
                         }}>확인</button>
                      </div>

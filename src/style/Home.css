@@ -1,9 +1,9 @@
-.home-container{
+.home-container {
    text-align: center;
    font-weight: 500;
 }
 
-.ment-alert{
+.ment-alert {
    display: none;
    position: fixed;
    background-color: rgba(0, 0, 0, 0.8);
@@ -17,16 +17,16 @@
    border-radius: 100px;
 }
 
-.show{
+.show {
    display: block;
 }
 
-.home-box1{
+.home-box1 {
    margin: 100px;
    font-size: 45px;
 }
 
-.home-box1 button{
+.home-box1 button {
    cursor: pointer;
    padding: 5px 20px;
    font-weight: 700;
@@ -37,36 +37,31 @@
    background-color: #528dd7;
 }
 
-.home-box1 button:hover{
+.home-box1 button:hover {
    transform: translateY(-5px);
    transition: all 0.3s;
 }
 
-.home-box2{
+.home-box2 {
    font-size: 50px;
    border-top: 2px solid #aaa;
    border-bottom: 2px solid #aaa;
    padding: 100px;
 }
 
-.home-box2 button{
+.home-box2 button {
    font-size: 30px;
    border: none;
    background-color: white;
    cursor: pointer;
 }
-/* 
-.home-box3{
-   display: flex;
-   justify-content: center;
-} */
 
-.home-box3-item{
+.home-box3-item {
    display: flex;
    justify-content: center;
 }
 
-.home-box3-item div{
+.home-box3-item div {
    width: 400px;
    height: 200px;
    border-radius: 10px;
@@ -74,17 +69,17 @@
    margin: 50px;
 }
 
-.item-title{
+.item-title {
    font-size: 30px;
    font-weight: 700;
 }
 
-.item-content{
+.item-content {
    font-size: 20px;
 }
 
 
-.copyRight{
+.copyRight {
    width: 100%;
    position: fixed;
    bottom: 0px;
@@ -92,4 +87,71 @@
    padding: 10px;
    text-align: center;
    opacity: 0.9;
+}
+
+
+@media screen and (max-width: 767px) {
+   .home-container {
+      text-align: center;
+      font-weight: 500;
+   }
+   
+   .ment-alert {
+      font-size: 16px;
+      width: 100%;
+      border-radius: 0px;
+   }
+   
+   .home-box1 {
+      margin: 100px 10px;
+      font-size: 30px;
+   }
+
+   .home-box1 div{
+      padding-top: 15px;
+   }
+   
+   .home-box1 button {
+      font-size: 16px;
+   }
+   
+   
+   .home-box2 {
+      font-size: 20px;
+      padding: 100px 10px;
+   }
+   
+   .home-box2 button {
+      font-size: 25px;
+      margin-top: 15px;
+   }
+
+   .home-box3{
+      margin: 100px 0;
+   }
+   
+   .home-box3-item {
+      flex-direction: column;
+      align-items: center;
+   }
+   
+   .home-box3-item div {
+      width: 300px;
+      height: 150px;
+      margin: 10px;
+   }
+   
+   .item-title {
+      font-size: 25px;
+   }
+   
+   .item-content {
+      font-size: 16px;
+   }
+
+   .copyRight {
+      width: 100vw;
+      padding: 10px 0;
+      font-size: 13px;
+   }
 }

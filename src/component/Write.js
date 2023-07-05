@@ -25,12 +25,11 @@ export default function Write() {
          let free = setTimeout(() => {
             setTimer(timer - 1);
          }, 1000);
-         return ()=>{
+         return () => {
             clearTimeout(free);
          }
       }
    }, [timer])
-   console.log(timer)
 
    return (
       <div className="write-container">
@@ -54,13 +53,11 @@ export default function Write() {
                </div>
                <div className="write-writer">
                   🙍‍♀️작성자: <input onInput={(e) => {
-                     // console.log(e.target.value)
                      setWriter(e.target.value)
                   }} name="writer"></input>
                </div>
                <div className="write-pw">
                   🔑패스워드: <input onInput={(e) => {
-                     // console.log(e.target.value)
                      setPw(e.target.value)
                   }} name="pw"></input>
                </div>

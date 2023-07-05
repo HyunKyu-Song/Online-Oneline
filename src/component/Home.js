@@ -9,13 +9,18 @@ export default function Home() {
    let [timer, setTimer] = useState(0);
    let [ment, setMent] = useState('');
 
-   useEffect(()=>{
-      if(timer == 0){
+   useEffect(() => {
+      if (timer == 0) {
          setAlert('');
       }
-      setTimeout(() => {
-         setTimer(timer-1);
-      }, 1000);
+      else {
+         let free = setTimeout(() => {
+            setTimer(timer - 1);
+         }, 1000);
+         return () => {
+            clearTimeout(free);
+         }
+      }
    }, [timer])
 
    return (
@@ -34,7 +39,7 @@ export default function Home() {
                <button onClick={() => {
                   setAlert('show');
                   setTimer(3);
-                  setMent('그저그런 하루셨군요! 내일은 좋은 하루가 되길 빌어요😊');
+                  setMent('내일은 좋은 하루가 되길 빌어요😊');
                }}>So So</button>
                <button onClick={() => {
                   setAlert('show');
@@ -44,8 +49,8 @@ export default function Home() {
             </div>
          </div>
          <div className="home-box2">
-            <div>한줄평으로 오늘을 기록해보세요</div>
-            <button onClick={() => { navigate('/write') }}>✍ 글 작성하러 가기</button>
+            <div><strong>한줄평</strong>으로 오늘을 기록해보세요</div>
+            <button onClick={() => { navigate('/write') }}>✍ <strong>글 작성</strong>하러 가기</button>
          </div>
          <div className="home-box3">
             <h2>한줄평인 이유?</h2>

@@ -36,20 +36,6 @@
    margin-bottom: 10px;
 }
 
-.delete-container{
-   text-align: end;
-}
-
-.deleteBtn{
-   font-size: 40px;
-   cursor: pointer;
-}
-
-.deleteBtn:hover{
-   cursor: pointer;
-   color: red;
-}
-
 .detail-title {
    cursor: pointer;
    font-size: 30px;
@@ -86,4 +72,41 @@
 
 .detail-container button:hover{
    background-color: #aaa;
+}
+
+@media screen and (max-width: 767px) {
+   .detail-container{
+      width: 90%;
+   }
+   
+   .detail-item{
+      padding: 60px 20px;
+   }
+   
+   .show-pw{
+      display: block;
+   }
+   
+   .detail-title {
+      font-size: 20px;
+   }
+   
+   .detail-content {
+      font-size: 18px;
+      margin-top: 30px;
+   }
+   
+   .detail-writer{
+      font-size: 14px;
+      margin-top: 100px;
+   }
+   
+   .detail-date{
+      font-size: 14px;
+   }
+   
+   .detail-container button{
+      font-size: 14px;
+      margin: 20px 10px;
+   }
 }
