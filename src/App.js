@@ -8,13 +8,13 @@ import './style/List.css';
 import './style/Detail.css';
 import './style/About.css';
 
-import Navbar from './component/Navbar';
-import Home from './component/Home';
-import Write from './component/Write';
-import List from './component/List';
-import About from './component/About';
-import Deatail from './component/Detail';
-import Update from './component/Update';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Write from './components/Write';
+import List from './components/List';
+import About from './components/About';
+import Deatail from './components/Detail';
+import Update from './components/Update';
 
 function App() {
   return (
