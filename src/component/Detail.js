@@ -9,8 +9,8 @@ export default function Deatail() {
    let navigate = useNavigate();
    var data = localStorage.getItem('DATA');
    data = JSON.parse(data);
-   let [n, setN] = useState(-1);
-   let [a, setA] = useState(-1);
+   let [params, setParams] = useState(-1);
+   let [idx, setIdx] = useState(-1);
    let [show, setShow] = useState('');
    let [pw, setPw] = useState('');
    let [correct, setCorrect] = useState(false);
@@ -33,27 +33,27 @@ export default function Deatail() {
    }, [timer])
 
    useEffect(() => {
-      setN(id);
+      setParams(id);
 
       data.map(function (item, i) {
          if (item.num == id) {
-            setA(i);
+            setIdx(i);
          }
       })
-   }, [n]);
+   }, [params]);
 
    return (
       <div className="detail-container">
          {
-            n == -1 ? <h2>Loading...</h2> :
+            params == -1 ? <h2>Loading...</h2> :
                <div className="detail-item">
                   <div className={`ment-alert ${alert}`}>
                      <p>{ment}</p>
                   </div>
-                  <div className="detail-title">제목: {data[a].title} </div>
-                  <div className="detail-content">{data[a].content}</div>
-                  <div className="detail-writer">작성자: {data[a].writer}</div>
-                  <div className="detail-date">{data[a].date}</div>
+                  <div className="detail-title">제목: {data[idx].title} </div>
+                  <div className="detail-content">{data[idx].content}</div>
+                  <div className="detail-writer">작성자: {data[idx].writer}</div>
+                  <div className="detail-date">{data[idx].date}</div>
 
                   <div>
                      <div className={`write-pw pw-check ${show}`}>
@@ -61,7 +61,7 @@ export default function Deatail() {
                            setPw(e.target.value)
                         }} name="pw"></input>
                         <button onClick={() => {
-                           if (pw == data[a].pw) {
+                           if (pw == data[idx].pw) {
                               setCorrect(true);
                               setAlert('show');
                               setMent('인증되었습니다. 수정 또는 삭제 버튼을 눌러주세요.');
@@ -71,7 +71,7 @@ export default function Deatail() {
                               setTimer(2);
                               setMent('패스워드가 틀렸습니다.');
                            }
-                           console.log(correct, pw, data[a].pw)
+                           console.log(correct, pw, data[idx].pw)
                         }}>확인</button>
                      </div>
                   </div>
@@ -79,7 +79,7 @@ export default function Deatail() {
                   <button onClick={() => {
                      setShow('show-pw');
                      if (correct == true) {
-                        navigate(`/update/${a}`);
+                        navigate(`/update/${idx}`);
                      }
                   }}>🔨수정</button> <button onClick={() => {
                      setShow('show-pw');
